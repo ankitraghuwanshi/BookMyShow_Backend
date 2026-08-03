@@ -1,6 +1,6 @@
 package org.scaler.bookmyshow_backend.models;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +10,16 @@ import java.util.List;
 @Setter
 @Entity
 public class Screen extends BaseModel{
-    //private String screenName;
+
+    @OneToMany
     private List<Seat> seatList;
-    private List<Feature> featureList;
+
+    @Enumerated(EnumType.ORDINAL)
+    @ElementCollection    //for list of enum
+    private List<Feature> features;
 }
+/*
+  1   --> M
+Screen---Seat   =>1:M
+   1  <-- 1
+*/
