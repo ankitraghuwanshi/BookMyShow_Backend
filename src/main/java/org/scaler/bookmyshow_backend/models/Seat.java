@@ -8,15 +8,15 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Entity
+@Entity(name="seats")
 public class Seat extends BaseModel {
     private String seatNumber;
 
     @ManyToOne
     private SeatType seatType;
 
-    private int rowNumber;
-    private int columnNumber;
+    private int rowVal;
+    private int colVal;
 }
 /*
  1  --> 1

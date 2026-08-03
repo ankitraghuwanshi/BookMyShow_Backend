@@ -8,7 +8,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+@Entity(name="cities")
 public class City extends BaseModel{
     private String cityName;
     //private List<Theatre> theatres;

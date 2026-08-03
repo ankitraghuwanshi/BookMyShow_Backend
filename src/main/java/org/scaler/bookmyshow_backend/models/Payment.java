@@ -9,7 +9,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Entity
+@Entity(name="payments")
 public class Payment extends BaseModel{
     private int amount;
     private String referenceId;

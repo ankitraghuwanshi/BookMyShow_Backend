@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Entity
+@Entity(name="show_seat_types")
 public class ShowSeatType extends BaseModel{
     @ManyToOne
     private Show show;
