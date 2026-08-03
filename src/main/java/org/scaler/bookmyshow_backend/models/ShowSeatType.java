@@ -1,10 +1,12 @@
 package org.scaler.bookmyshow_backend.models;
 
+import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@Entity
 public class ShowSeatType extends BaseModel{
     private Show show;
     private SeatType seatType;
